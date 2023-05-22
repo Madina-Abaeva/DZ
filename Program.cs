@@ -1,36 +1,8 @@
-﻿// Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
-
-
-Console.WriteLine("Vvedine chislo");
-int day = int.Parse(Console.ReadLine());
-
-if ((day >= 1 && day <= 7))
+﻿// See https://aka.ms/new-console-template for more information
+Console.WriteLine("Hello, World!");
+string num(int a)
 {
-
-    if ((day >= 1 && day <= 5))
-{ 
-
-        Console.WriteLine(" Rabochiy den' ");
+if (a>1) return $"{a}, "+num(a-1);
+return "1";
 }
-
-    else
-    {
-
-        Console.WriteLine("Vixodnoy den'");
-
-
-    }
-   
-
-
-}
-else 
-{
-
-    Console.WriteLine(" Vvedite chislo ot 1 do 7 ");
-
-
-}
-
-
-
+Console.WriteLine(num(5));
